@@ -3,15 +3,13 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import useGlobal from "../../Hooks/useGlobal";
-import { updateProfile } from "firebase/auth";
-import auth from "../../Firebase/Firebase";
 
 /* eslint-disable react/no-unescaped-entities */
 const Register = () => {
     const [showPaas, setShowPaas] = useState(false);
     const navigate = useNavigate();
 
-    const { createUser } = useGlobal();
+    const { createUser, profileUpdate } = useGlobal();
 
     // function for password toggle 
     const handleTogglePass = () => {
@@ -45,9 +43,8 @@ const Register = () => {
                     toast.success('Account created successfully')
                 }, 1000);
 
-                updateProfile(auth.currentUser, {
-                    displayName: name, photoURL: photo,
-                })
+                // update profile
+                profileUpdate()
                     .then(() => {
                         setTimeout(() => {
                             toast.success(`Welcome ${name}! please login.`)

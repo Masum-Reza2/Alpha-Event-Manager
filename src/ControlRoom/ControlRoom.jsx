@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import auth from "../Firebase/Firebase";
 
 
@@ -13,8 +13,16 @@ const ControlRoom = ({ children }) => {
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
+    // profile update
+    const profileUpdate = (name, photo) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo,
+        })
+    }
+
     const globalInfo = {
         createUser,
+        profileUpdate,
     }
 
     return (
