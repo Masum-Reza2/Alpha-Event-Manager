@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Wedding",
+        "image_team": "https://i.ibb.co/HPh4rVs/wedding.jpg",
+        "image_author": "https://i.ibb.co/m4Ndvdf/authorwedding.jpg",
+        "price": 200000,
+        "description": "A grand celebration of love and unity, our wedding packages offer everything you need for your special day. From elegant venues adorned with flowers to exquisite cuisine that tantalizes your taste buds, we create an enchanting atmosphere that leaves lasting memories. Our professional team takes care of every detail, ensuring a stress-free experience. Let us transform your dream wedding into reality, with every moment captured in the most beautiful way possible."
+    },
+    {
+        "id": 2,
+        "name": "Birthday Parties",
+        "image_team": "https://i.ibb.co/t3P8KGM/happy-business-team-with-birthday-cake-are-greeting-colleague-office-party-484651-5499.jpg",
+        "image_author": "https://i.ibb.co/Bs2XtBb/birthdayauthor.jpg",
+        "price": 5000,
+        "description": "Celebrate another trip around the sun with our delightful birthday party packages. Whether it's a child's whimsical themed party or an elegant adult soirée, we cater to all ages and preferences. Our packages include vibrant decorations, delicious cakes, and entertainment that will keep your guests smiling. With us, your birthday celebration will be filled with joy, laughter, and unforgettable moments."
+    },
+    {
+        "id": 3,
+        "name": "Anniversaries",
+        "image_team": "https://i.ibb.co/QPJHqW6/anniversaryteam.jpg",
+        "image_author": "https://i.ibb.co/P5nP0fh/anniversary-author.jpg",
+        "price": 8000,
+        "description": "Mark another year of love and commitment with our anniversary celebration packages. We create an intimate and romantic ambiance where you can reminisce about your journey together. From candlelit dinners to personalized decor, we make sure every detail reflects your unique story. Celebrate your enduring love with an anniversary event that captures the essence of your relationship."
+    },
+    {
+        "id": 4,
+        "name": "Engagement Parties",
+        "image_team": "https://i.ibb.co/qgnHdnp/angagementteam-1.jpg",
+        "image_author": "https://i.ibb.co/Dwq9s20/anniversarycelebration.jpg",
+        "price": 6000,
+        "description": "Begin your journey to forever with an engagement party that sets the perfect tone. Our packages include stunning venues, engagement photo sessions, and delicious cuisine. Share your joy with friends and family in an atmosphere of love and excitement. Let this special occasion be the start of a beautiful chapter in your life together."
+    },
+    {
+        "id": 5,
+        "name": "Retirement Parties",
+        "image_team": "https://i.ibb.co/myynD22/Retirementauthor.jpg",
+        "image_author": "https://i.ibb.co/ys710K0/retirementauthor-1.jpg",
+        "price": 4000,
+        "description": "Bid farewell to your dedicated years of service with a retirement party that honors your accomplishments. We create a warm and nostalgic atmosphere for you to reminisce with colleagues and friends. From heartfelt speeches to memorable gifts, we ensure your retirement is celebrated in style. Embrace the freedom of retirement with a joyful gathering."
+    },
+    {
+        "id": 6,
+        "name": "Baby Showers",
+        "image_team": "https://i.ibb.co/v34xfMw/babyteam.jpg",
+        "image_author": "https://i.ibb.co/1fVhHK3/babuauthor.jpg",
+        "price": 3500,
+        "description": "Welcome the upcoming arrival of a new family member with a baby shower full of love and excitement. Our packages feature adorable decorations, fun games, and delicious treats. Create beautiful memories as you celebrate the parents-to-be and shower them with best wishes. Let this event be the start of a wonderful journey into parenthood."
+    },
+    {
+        "id": 7,
+        "name": "Bridal Showers",
+        "image_team": "https://i.ibb.co/qgnHdnp/angagementteam-1.jpg",
+        "image_author": "https://i.ibb.co/Dwq9s20/anniversarycelebration.jpg",
+        "price": 3000,
+        "description": "Honor the bride-to-be on her special day with a bridal shower filled with laughter and joy. Our packages include themed decor, bridal games, and delectable treats. Gather with friends and family to celebrate this exciting chapter in her life. Let us create a memorable and fun bridal shower that the bride will cherish forever."
+    },
+    {
+        "id": 8,
+        "name": "Housewarming Parties",
+        "image_team": "https://i.ibb.co/HPh4rVs/wedding.jpg",
+        "image_author": "https://i.ibb.co/m4Ndvdf/authorwedding.jpg",
+        "price": 2500,
+        "description": "Warmly welcome friends and family to your new home with a housewarming party that creates lasting memories. Our packages feature homey decor, delicious home-cooked food, and a warm atmosphere. Share your excitement about your new space and create bonds that will thrive in your new home. Let us help you make your housewarming party special."
+    },
+    {
+        "id": 9,
+        "name": "Graduation Parties",
+        "image_team": "https://i.ibb.co/L6Tb4xb/graduationteam.jpg",
+        "image_author": "https://i.ibb.co/xfRs1DN/graduationauthor.jpg",
+        "price": 3000,
+        "description": "Celebrate your academic achievements with a graduation party that marks the culmination of your hard work. Our packages include themed decor, photo booths, and delicious refreshments. Share your success with friends and family in an atmosphere of pride and accomplishment. Let us help you create a memorable graduation celebration."
+    }
+]
