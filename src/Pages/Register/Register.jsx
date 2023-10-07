@@ -24,8 +24,6 @@ const Register = () => {
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-        // const terms = form.get('terms')
-        // console.log(name, photo, email, password, terms)
 
         // setting conditions
         if (password.length < 6) {
@@ -44,7 +42,7 @@ const Register = () => {
                 }, 1000);
 
                 // update profile
-                profileUpdate()
+                profileUpdate(name, photo)
                     .then(() => {
                         setTimeout(() => {
                             toast.success(`Welcome ${name}! please login.`)

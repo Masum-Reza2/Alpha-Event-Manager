@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
+import useGlobal from "../../Hooks/useGlobal";
 
 /* eslint-disable react/no-unescaped-entities */
 const Login = () => {
-    const [showPaas, setShowPaas] = useState(false)
+    const [showPaas, setShowPaas] = useState(false);
+    const { loginUser } = useGlobal();
+    const navigate = useNavigate();
 
     const handleTogglePass = () => {
         setShowPaas(!showPaas)
@@ -16,7 +19,19 @@ const Login = () => {
         const form = new FormData(e.currentTarget)
         const email = form.get('email');
         const password = form.get('password')
-        console.log(email, password)
+
+        // loggin in user
+        loginUser(email, password)
+            .then(result => {
+                navigate('/')
+                toast.success('Login successfull.')
+                const user = result.user
+                console.log(user)
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
+
     }
 
     return (
