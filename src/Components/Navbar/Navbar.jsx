@@ -1,8 +1,25 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import defaultProfile from '../../assets/images/defaultProfile.jpg'
 import logo from '../../assets/favicon.avif'
+import useGlobal from "../../Hooks/useGlobal"
+import toast, { Toaster } from "react-hot-toast"
 
 const Navbar = () => {
+    const { user, signOutUser } = useGlobal();
+    const navigate = useNavigate();
+
+    // signing out user
+    const handleLogOut = () => {
+        signOutUser()
+            .then(() => {
+                toast.success('Log Out Successfull.');
+                navigate('/login')
+            })
+            .catch((error) => {
+                toast.error(error.message)
+            })
+    }
+
     const NavLinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/login'}>Login</NavLink></li>
@@ -10,6 +27,7 @@ const Navbar = () => {
     </>
     return (
         <div>
+            <Toaster />
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,27 +52,41 @@ const Navbar = () => {
                 </div>
 
                 {/* make it dynamic */}
-                <div className="navbar-end">
-                    <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-16 rounded-full">
-                                <img src={defaultProfile} />
+                {
+                    user ?
+                        <div className="navbar-end">
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar relative mr-3 md:mr-0">
+                                    <div className="w-16 rounded-full">
+                                        <img src={user?.photoURL || defaultProfile} />
+                                    </div>
+                                    <div className="absolute top-[3.25rem]">
+                                        {user?.displayName}
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-center">
+                                    <li>
+                                        <a className="justify-between">
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li><a>Settings</a></li>
+                                    <li><button onClick={handleLogOut}>Logout</button></li>
+                                </ul>
                             </div>
-                            <div>
-                                Masum Reza
+                        </div>
+                        :
+                        <div className="navbar-end">
+                            <div className="dropdown dropdown-end">
+                                <NavLink to={'/login'}>
+                                    <button tabIndex={0} className="btn btn-ghost btn-outline avatar">
+                                        Log In
+                                    </button>
+                                </NavLink>
                             </div>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-center">
-                            <li>
-                                <a className="justify-between">
-                                    Profile
-                                </a>
-                            </li>
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
+                        </div>
+                }
+
 
             </div>
         </div>
