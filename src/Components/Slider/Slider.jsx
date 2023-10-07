@@ -1,8 +1,10 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import PropTypes from 'prop-types';
+import useGlobal from '../../Hooks/useGlobal';
 
 const Slider = ({ services }) => {
+    const { user } = useGlobal()
 
     const responsive = {
         desktop: {
@@ -23,7 +25,7 @@ const Slider = ({ services }) => {
     };
 
     return (
-        <div>
+        <div className={`bg-black text-gray-400 md:rounded-lg pb-5 ${user && 'mt-5'}`}>
             <h1 className='text-center pb-3 font-extrabold text-lg md:text-2xl'>Your Event , Our Responsibility.</h1>
             <Carousel
                 arrows={false}

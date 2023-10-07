@@ -11,9 +11,13 @@ const Route = createBrowserRouter([
         element: <MainLayOut />,
         errorElement: <ErrorPage />,
         children: [
+            // normal routes
             { path: '/', loader: () => fetch('/services.json'), element: <Home /> },
             { path: '/login', element: <Login /> },
             { path: '/register', element: <Register /> },
+
+            // private routes
+
         ]
     }
 ])
