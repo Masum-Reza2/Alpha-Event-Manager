@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../Firebase/Firebase";
 
 
@@ -31,7 +31,11 @@ const ControlRoom = ({ children }) => {
         return signOut(auth);
     }
 
-
+    // additional login methods
+    // login with google 
+    const additionalLogin = (provider) => {
+        return signInWithPopup(auth, provider);
+    }
 
     // observer
     useEffect(() => {
@@ -50,6 +54,7 @@ const ControlRoom = ({ children }) => {
         profileUpdate,
         loginUser,
         signOutUser,
+        additionalLogin,
     }
 
     return (

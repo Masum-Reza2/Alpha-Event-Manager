@@ -5,11 +5,12 @@ import toast, { Toaster } from "react-hot-toast";
 import useGlobal from "../../Hooks/useGlobal";
 import { FcGoogle } from 'react-icons/fc';
 import { BsGithub } from 'react-icons/bs';
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 /* eslint-disable react/no-unescaped-entities */
 const Login = () => {
     const [showPaas, setShowPaas] = useState(false);
-    const { loginUser } = useGlobal();
+    const { loginUser, additionalLogin } = useGlobal();
     const navigate = useNavigate();
 
     const handleTogglePass = () => {
@@ -34,6 +35,21 @@ const Login = () => {
                 toast.error(error.message)
             })
 
+    }
+
+    // google and github login
+    const googleProvider = new GoogleAuthProvider();
+    const gitHubProvider = new GithubAuthProvider();
+    const handleAdditional = (provider) => {
+        additionalLogin(provider)
+            .then(result => {
+                navigate('/')
+                toast.success('Login successfull.')
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                toast.error(errorMessage)
+            })
     }
 
     return (
@@ -107,11 +123,11 @@ const Login = () => {
             <div className="flex w-[90vw] md:w-[60vw] lg:w-[40vw] border flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5 mt-5">
                 <p className="text-center border-y border-yellow-600 my-2">or</p>
                 <div className="w-full flex justify-center">
-                    <button className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with Google<FcGoogle className="text-2xl" /></button>
+                    <button onClick={() => handleAdditional(googleProvider)} className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with Google<FcGoogle className="text-2xl" /></button>
 
                 </div>
                 <div className="w-full flex justify-center">
-                    <button className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with GitHub<BsGithub className="text-2xl" /></button>
+                    <button onClick={() => handleAdditional(gitHubProvider)} className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with GitHub<BsGithub className="text-2xl" /></button>
                 </div>
             </div>
 
