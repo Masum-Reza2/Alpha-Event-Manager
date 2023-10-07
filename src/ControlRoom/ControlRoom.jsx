@@ -1,4 +1,5 @@
-import { createContext } from "react"
+import { createContext } from "react";
+import PropTypes from 'prop-types';
 
 export const GlobalContext = createContext();
 
@@ -11,6 +12,10 @@ const ControlRoom = ({ children }) => {
             {children}
         </GlobalContext.Provider>
     )
+}
+
+ControlRoom.propTypes = {
+    children: PropTypes.node,
 }
 
 export default ControlRoom
