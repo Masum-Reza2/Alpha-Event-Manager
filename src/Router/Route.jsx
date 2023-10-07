@@ -1,10 +1,15 @@
 import { createBrowserRouter } from "react-router-dom"
 import MainLayOut from "../MainLayOut/MainLayOut"
+import ErrorPage from "../Pages/ErrorPage/ErrorPage"
 
 const Route = createBrowserRouter([
     {
         path: '/',
-        element: <MainLayOut />
+        element: <MainLayOut />,
+        errorElement: <ErrorPage />,
+        children: [
+            {}
+        ]
     }
 ])
 
