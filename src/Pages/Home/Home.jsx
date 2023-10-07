@@ -1,10 +1,14 @@
 import { Toaster } from "react-hot-toast"
+import Slider from "../../Components/Slider/Slider"
+import { useLoaderData } from "react-router-dom"
 
 const Home = () => {
+    const services = useLoaderData();
+
     return (
         <div>
             <Toaster />
-            this is home
+            <Slider services={services} />
         </div>
     )
 }

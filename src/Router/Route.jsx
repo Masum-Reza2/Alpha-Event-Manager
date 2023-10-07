@@ -11,7 +11,7 @@ const Route = createBrowserRouter([
         element: <MainLayOut />,
         errorElement: <ErrorPage />,
         children: [
-            { path: '/', element: <Home /> },
+            { path: '/', loader: () => fetch('/services.json'), element: <Home /> },
             { path: '/login', element: <Login /> },
             { path: '/register', element: <Register /> },
         ]
