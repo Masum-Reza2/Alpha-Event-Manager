@@ -8,7 +8,7 @@ const MainLayOut = () => {
         <div className="md:w-[90%] mx-auto">
             <Toaster />
             <Navbar />
-            <div className="min-h-[70vh] py-10">
+            <div className="min-h-[70vh] py-2">
                 <Outlet />
             </div>
         </div>
