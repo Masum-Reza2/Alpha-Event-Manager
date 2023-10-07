@@ -3,6 +3,8 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import useGlobal from "../../Hooks/useGlobal";
+import { FcGoogle } from 'react-icons/fc';
+import { BsGithub } from 'react-icons/bs';
 
 /* eslint-disable react/no-unescaped-entities */
 const Login = () => {
@@ -50,6 +52,7 @@ const Login = () => {
                     {/* email */}
                     <div className="relative h-11 w-full min-w-[200px]">
                         <input
+                            required
                             type="email"
                             name="email"
                             className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-black focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -67,6 +70,7 @@ const Login = () => {
                                 <AiFillEye onClick={handleTogglePass} className="absolute right-2 text-xl top-3 " />
                         }
                         <input
+                            required
                             type={showPaas ? 'text' : 'password'}
                             name="password"
                             className="peer h-full w-full rounded-md border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-black focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
@@ -99,6 +103,18 @@ const Login = () => {
                 </div>
 
             </form>
+
+            <div className="flex w-[90vw] md:w-[60vw] lg:w-[40vw] border flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5 mt-5">
+                <p className="text-center border-y border-yellow-600 my-2">or</p>
+                <div className="w-full flex justify-center">
+                    <button className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with Google<FcGoogle className="text-2xl" /></button>
+
+                </div>
+                <div className="w-full flex justify-center">
+                    <button className="mt-2 btn hover:bg-black rounded-md w-[90%] bg-black text-white ">Login with GitHub<BsGithub className="text-2xl" /></button>
+                </div>
+            </div>
+
         </div>
     )
 }

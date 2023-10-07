@@ -11,7 +11,6 @@ const MainLayOut = () => {
             <div className="min-h-[70vh] py-10">
                 <Outlet />
             </div>
-            footer here
         </div>
     )
 }

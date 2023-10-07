@@ -39,7 +39,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl md:hidden">Alpha mgt</a>
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar hidden md:block">
+                    <label tabIndex={0} className="btn-circle avatar hidden md:block">
                         <div className="w-16 rounded-full">
                             <img className="w-16" src={logo} />
                         </div>
