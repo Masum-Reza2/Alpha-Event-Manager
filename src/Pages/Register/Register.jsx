@@ -22,11 +22,14 @@ const Register = () => {
     return (
         <div>
             <form onSubmit={handleRegister} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
+
+                {/* heading */}
                 <div className="relative mx-4 -mt-6 mb-4 grid h-16 md:h-28 place-items-center overflow-hidden rounded-xl bg-black bg-clip-border text-white shadow-lg shadow-gray-300">
                     <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
                         Registration
                     </h3>
                 </div>
+
                 <div className="flex flex-col gap-4 p-6">
 
                     {/* name */}
@@ -84,7 +87,7 @@ const Register = () => {
 
                     </div>
 
-                    {/* button terms and condition */}
+                    {/*terms and condition */}
                     <div className="-ml-2.5">
                         <div className="inline-flex items-center">
                             <label
@@ -123,6 +126,8 @@ const Register = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* submit button */}
                 <div className="p-6 pt-0">
                     <button
                         className="block w-full select-none rounded-lg bg-black py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
@@ -141,6 +146,7 @@ const Register = () => {
                         </Link>
                     </p>
                 </div>
+
             </form>
         </div>
     )
