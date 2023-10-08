@@ -14,7 +14,7 @@ const MainLayOut = () => {
 
 
     return (
-        <div className="md:w-[90%] mx-auto scroll-smooth">
+        <div className="mx-auto scroll-smooth">
             <Toaster />
             <Navbar />
             {
