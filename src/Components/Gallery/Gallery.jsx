@@ -23,7 +23,7 @@ const Gallery = ({ services }) => {
     };
 
     return (
-        <div className={`bg-black text-gray-400  py-5`}>
+        <div className={`bg-gradient-to-r from-purple-300 to-black text-gray-200  py-5`}>
             <h1 className='text-center pb-3 font-extrabold text-lg md:text-2xl'>Our Gallery</h1>
             <Carousel
                 arrows={true}
