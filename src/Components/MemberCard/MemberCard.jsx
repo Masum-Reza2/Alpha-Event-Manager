@@ -16,7 +16,7 @@ const MemberCard = ({ member }) => {
                     <p className="block text-gray-500 bg-clip-text font-sans text-base font-medium leading-relaxed text-transparent antialiased">
                         {member?.profession}
                     </p>
-                    <p className="text-xs">
+                    <p className="text-xs h-10">
                         {member?.description}
                     </p>
                 </div>
