@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,6 +12,8 @@ const Login = () => {
     const [showPaas, setShowPaas] = useState(false);
     const { loginUser, additionalLogin } = useGlobal();
     const navigate = useNavigate();
+    const location = useLocation()
+
 
     const handleTogglePass = () => {
         setShowPaas(!showPaas)
@@ -26,7 +28,7 @@ const Login = () => {
         // loggin in user
         loginUser(email, password)
             .then(result => {
-                navigate('/')
+                navigate(location?.state || '/')
                 toast.success('Login successfull.')
                 const user = result.user
                 console.log(user)
@@ -43,7 +45,7 @@ const Login = () => {
     const handleAdditional = (provider) => {
         additionalLogin(provider)
             .then(result => {
-                navigate('/')
+                navigate(location?.state || '/')
                 toast.success('Login successfull.')
             })
             .catch(error => {

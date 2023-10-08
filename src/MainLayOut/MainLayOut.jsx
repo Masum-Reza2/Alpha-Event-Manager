@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 const MainLayOut = () => {
 
     return (
-        <div className="md:w-[90%] mx-auto">
+        <div className="md:w-[90%] mx-auto scroll-smooth">
             <Toaster />
             <Navbar />
             <div className="min-h-[70vh] py-2">

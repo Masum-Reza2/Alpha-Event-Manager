@@ -1,9 +1,10 @@
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import useGlobal from "../Hooks/useGlobal";
 import PropTypes from 'prop-types';
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useGlobal();
+    const { pathname } = useLocation()
 
     if (loading) {
         return <div className="h-[80vh] flex items-center justify-center">
@@ -17,7 +18,7 @@ const PrivateRoute = ({ children }) => {
         return children
     }
     else {
-        return <Navigate to={'/login'}></Navigate>
+        return <Navigate state={pathname} to={'/login'}></Navigate>
     }
 }
 
