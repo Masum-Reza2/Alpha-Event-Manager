@@ -34,8 +34,9 @@ const DetailsService = () => {
                     <p className="mt-3 block font-sans text-justify md:text-xl font-normal leading-relaxed text-gray-700 antialiased">
                         {description}
                     </p>
+                    <p className="mt-3 font-semibold"><span className="underline">Price</span> : {price} tk only!</p>
                 </div>
-                <div className="flex items-center justify-between p-6">
+                <div className="flex items-center justify-between px-6 py-3">
                     <div className="flex items-center -space-x-3">
                         <img
                             alt="natali craig"
@@ -49,6 +50,7 @@ const DetailsService = () => {
                         {moment().format("dddd, D MMMM YYYY")}
                     </p>
                 </div>
+                <button className="py-3 btn btn-outline">Add to cart</button>
             </div>
         </div>
     )
