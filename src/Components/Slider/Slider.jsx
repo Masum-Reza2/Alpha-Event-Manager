@@ -29,7 +29,7 @@ const Slider = ({ services }) => {
             <h1 className='text-center pb-3 font-extrabold text-lg md:text-2xl'>Your Event , Our Responsibility.</h1>
             <Carousel
                 arrows={false}
-                pauseOnHover={true}
+                pauseOnHover={false}
                 draggable={true}
                 showDots={false}
                 responsive={responsive}
@@ -48,9 +48,9 @@ const Slider = ({ services }) => {
             >
                 {
                     services.map((service, index) => {
-                        let { image_team } = service
+                        let { image_team, name } = service
                         return <div className='mx-2 rounded-xl h-[70vh]' key={index}>
-                            <img className='h-full w-full rounded-xl' src={image_team} alt="" />
+                            <img className='h-full w-full rounded-xl' src={image_team} alt={`image of ${name}`} />
                         </div>
                     })
                 }
