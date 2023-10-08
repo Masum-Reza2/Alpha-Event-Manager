@@ -16,7 +16,7 @@ const Home = () => {
             <Slider services={services} />
             <OurServices services={services} />
             <WhyUs />
-            <Gallery />
+            <Gallery services={services} />
             <Ourclients />
             <Footer />
         </div>
