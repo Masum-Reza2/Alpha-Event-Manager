@@ -45,7 +45,7 @@ const DetailsService = () => {
                         />
                         <p className="translate-x-5 font-semibold">{user?.displayName}</p>
                     </div>
-                    <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased">
+                    <p className="block font-sans text-base font-normal leading-relaxed text-inherit antialiased translate-x-4 md:translate-x-0">
                         {moment().format("dddd, D MMMM YYYY")}
                     </p>
                 </div>

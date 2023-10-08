@@ -7,15 +7,18 @@ import auth from "../Firebase/Firebase";
 export const GlobalContext = createContext();
 
 const ControlRoom = ({ children }) => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true)
 
     //create new user
     const createUser = (email, password) => {
+        setLoading(true)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     // profile update
     const profileUpdate = (name, photo) => {
+        setLoading(true)
         return updateProfile(auth.currentUser, {
             displayName: name, photoURL: photo,
         })
@@ -23,17 +26,20 @@ const ControlRoom = ({ children }) => {
 
     // signInUser
     const loginUser = (email, password) => {
+        setLoading(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // signOutUser
     const signOutUser = () => {
+        setLoading(true)
         return signOut(auth);
     }
 
     // additional login methods
     // login with google 
     const additionalLogin = (provider) => {
+        setLoading(true)
         return signInWithPopup(auth, provider);
     }
 
@@ -42,6 +48,7 @@ const ControlRoom = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
             console.log('current user is', currentUser)
             setUser(currentUser)
+            setLoading(false)
         })
         return () => {
             unSubscribe();
@@ -50,6 +57,7 @@ const ControlRoom = ({ children }) => {
 
     const globalInfo = {
         user,
+        loading,
         createUser,
         profileUpdate,
         loginUser,
