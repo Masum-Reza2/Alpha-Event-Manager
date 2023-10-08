@@ -43,10 +43,10 @@ const Footer = () => {
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4 text-2xl">
-                        <BsFacebook className="text-blue-600 font-bold" />
-                        <AiFillInstagram className="text-orange-600" />
-                        <AiFillYoutube className="text-red-600" />
-                        <BsTwitter className="text-sky-600" />
+                        <BsFacebook className="text-blue-600 font-bold cursor-pointer transition-all duration-300 hover:scale-110 active:scale-125" />
+                        <AiFillInstagram className="text-orange-600 cursor-pointer transition-all duration-300 hover:scale-110 active:scale-125" />
+                        <AiFillYoutube className="text-red-600 cursor-pointer transition-all duration-300 hover:scale-110 active:scale-125" />
+                        <BsTwitter className="text-sky-600 cursor-pointer transition-all duration-300 hover:scale-110 active:scale-125" />
                     </div>
                 </nav>
             </footer>

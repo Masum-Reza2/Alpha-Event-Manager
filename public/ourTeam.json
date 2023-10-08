@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "gender": "Male",
+        "profession": "Wedding Event Manager",
+        "img": "https://i.ibb.co/pKFRkyn/male1.jpg",
+        "description": "John specializes in creating unforgettable wedding experiences."
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "gender": "Female",
+        "profession": "Birthday Parties Event Manager",
+        "img": "https://i.ibb.co/b555PJS/female1.jpg",
+        "description": "Jane is passionate about organizing fun and memorable birthday parties."
+    },
+    {
+        "id": 3,
+        "name": "David Johnson",
+        "gender": "Male",
+        "profession": "Anniversaries Event Manager",
+        "img": "https://i.ibb.co/fQb0RcK/male2.jpg",
+        "description": "David excels in planning and executing romantic anniversary celebrations."
+    },
+    {
+        "id": 4,
+        "name": "Emily Wilson",
+        "gender": "Female",
+        "profession": "Engagement Parties Event Manager",
+        "img": "https://i.ibb.co/FwjdwXf/female2.jpg",
+        "description": "Emily specializes in creating magical engagement party moments."
+    },
+    {
+        "id": 5,
+        "name": "Michael Brown",
+        "gender": "Male",
+        "profession": "Retirement Parties Event Manager",
+        "img": "https://i.ibb.co/3Nxs9Fn/male3.jpg",
+        "description": "Michael ensures retirees have a memorable and enjoyable farewell party."
+    },
+    {
+        "id": 6,
+        "name": "Sarah Adams",
+        "gender": "Female",
+        "profession": "Baby Showers Event Manager",
+        "img": "https://i.ibb.co/t4djV9z/female3.jpg",
+        "description": "Sarah plans heartwarming baby shower celebrations for parents-to-be."
+    },
+    {
+        "id": 7,
+        "name": "Linda Miller",
+        "gender": "Female",
+        "profession": "Bridal Showers Event Manager",
+        "img": "https://i.ibb.co/8g42ZMX/female4.jpg",
+        "description": "Linda specializes in organizing beautiful bridal shower events."
+    },
+    {
+        "id": 8,
+        "name": "Robert Clark",
+        "gender": "Male",
+        "profession": "Housewarming Parties Event Manager",
+        "img": "https://i.ibb.co/9srd69m/male4.jpg",
+        "description": "Robert creates warm and welcoming housewarming gatherings."
+    },
+    {
+        "id": 9,
+        "name": "Olivia Turner",
+        "gender": "Female",
+        "profession": "Graduation Parties Event Manager",
+        "img": "https://i.ibb.co/8g42ZMX/female4.jpg",
+        "description": "Olivia plans memorable graduation parties for students and their families."
+    }
+]
