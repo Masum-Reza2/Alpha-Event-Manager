@@ -50,7 +50,7 @@ const DetailsService = () => {
                         {moment().format("dddd, D MMMM YYYY")}
                     </p>
                 </div>
-                <button className="py-3 btn btn-outline">Add to cart</button>
+                <button className="py-3 btn btn-outline">Book now</button>
             </div>
         </div>
     )

@@ -7,6 +7,8 @@ import Register from "../Pages/Register/Register"
 import DetailsService from "../Components/DetailsService/DetailsService"
 import PrivateRoute from "../PrivateRoute/PrivateRoute"
 import OurTeam from "../Pages/OurTeam/OurTeam"
+import Menus from "../Pages/Menus/Menus"
+import Venus from "../Pages/Venus/Venus"
 
 const Route = createBrowserRouter([
     {
@@ -25,6 +27,8 @@ const Route = createBrowserRouter([
                 element: <PrivateRoute><DetailsService /></PrivateRoute>
             },
             { path: '/ourTeam', loader: () => fetch('/ourTeam.json'), element: <PrivateRoute><OurTeam /></PrivateRoute> },
+            { path: '/menus', element: <PrivateRoute><Menus /></PrivateRoute> },
+            { path: '/venus', element: <PrivateRoute><Venus /></PrivateRoute> },
         ]
     }
 ])
