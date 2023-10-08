@@ -1,11 +1,17 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, useLocation, useNavigation } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import { Toaster } from "react-hot-toast";
 import Spinner from "../Components/Spinner/Spinner";
+import { useEffect } from "react";
 
 const MainLayOut = () => {
     const navigation = useNavigation();
-    console.log(navigation)
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        document.title = `Alpha Event Manager${pathname === '/' ? '-Home' : pathname.replace('/', '-')}`
+    }, [pathname])
+
 
     return (
         <div className="md:w-[90%] mx-auto scroll-smooth">
