@@ -9,7 +9,7 @@ const MessageUs = () => {
                 <div className="h-[80vh] lg:h-[60vh] space-y-5 rounded-lg bg-black flex flex-col items-center justify-center">
 
                     <div className="text-white text-center text-2xl md:text-4xl outline px-3 py-1 rounded-md outline-white mx-5">
-                        Aplha mgt your event our responsibility!
+                        Alpha mgt your event our responsibility!
                     </div>
 
                     <div className="flex flex-col items-center justify-center">
