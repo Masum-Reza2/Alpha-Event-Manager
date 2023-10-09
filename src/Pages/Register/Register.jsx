@@ -9,7 +9,7 @@ const Register = () => {
     const [showPaas, setShowPaas] = useState(false);
     const navigate = useNavigate();
 
-    const { createUser, profileUpdate, user } = useGlobal();
+    const { createUser, profileUpdate, user, signOutUser } = useGlobal();
 
     // function for password toggle 
     const handleTogglePass = () => {
@@ -40,6 +40,7 @@ const Register = () => {
                 setTimeout(() => {
                     toast.success('Account created successfully')
                 }, 1000);
+                signOutUser();
 
                 // update profile
                 profileUpdate(name, photo)
