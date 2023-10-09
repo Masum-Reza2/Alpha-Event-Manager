@@ -18,8 +18,8 @@ import client15 from '../../assets/clients/client (15).png'
 const Ourclients = () => {
     return (
         <div className="mt-10 border-y shadow-sm">
-            <h1 className="text-center text-2xl md:text-4xl underline">Our Clients</h1>
-            <Marquee pauseOnHover={true} speed={40} className="pb-2">
+            <h1 className="text-center text-2xl md:text-4xl text-gray-500">Our Clients</h1>
+            <Marquee pauseOnHover={true} speed={40} className="pb-2 cursor-pointer">
                 <img className="w-[50px] md:w-[100px] ml-10 md:ml-20" src={client1} alt="" />
                 <img className="w-[50px] md:w-[100px] ml-10 md:ml-20" src={client2} alt="" />
                 <img className="w-[50px] md:w-[100px] ml-10 md:ml-20" src={client3} alt="" />
