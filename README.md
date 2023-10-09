@@ -139,7 +139,7 @@ console.log(count);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here i want to explain this answer to the point. 0 is a falsy value, thats why the loop never get inside when he see 0 is knocking at the door, and he kick out 0 as he is falsy value and as per the condition count became 3.</i>
 
 </p>
 </details>
