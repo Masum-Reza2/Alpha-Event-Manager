@@ -4,6 +4,11 @@ import { Toaster } from "react-hot-toast";
 import Spinner from "../Components/Spinner/Spinner";
 import { useEffect } from "react";
 
+// AOS 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
 const MainLayOut = () => {
     const navigation = useNavigation();
     const { pathname } = useLocation();

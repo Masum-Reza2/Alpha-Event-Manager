@@ -5,7 +5,10 @@ const ServiceCard = ({ service }) => {
     const { id, name, image_author, price, description } = service;
 
     return (
-        <div className="card flex flex-col h-full w-full  bg-base-100 shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-2 hover:bg-red-100 hover:shadow-pink-50">
+        <div className="card flex flex-col h-full w-full  bg-base-100 shadow-xl transition-all duration-500 cursor-pointer hover:-translate-y-2 hover:bg-red-100 hover:shadow-pink-50"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+        >
             <figure><img className='h-full md:h-[50vh] w-full' src={image_author} alt={`image of ${name}`} /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>

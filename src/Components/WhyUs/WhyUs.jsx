@@ -35,7 +35,7 @@ const whyUsInfo = [
 
 const WhyUs = () => {
     return (
-        <div className="py-10 w-[90%] mx-auto space-y-5">
+        <div className="py-10 w-[90%] mx-auto space-y-5" data-aos="fade-down">
             <div className="border"></div>
             <h1 className="text-2xl md:text-5xl">Why Us?</h1>
             <p className="text-sm md:text-base">FOR ALL YOUR CATERING NEEDS.</p>
