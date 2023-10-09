@@ -9,7 +9,7 @@ const Register = () => {
     const [showPaas, setShowPaas] = useState(false);
     const navigate = useNavigate();
 
-    const { createUser, profileUpdate } = useGlobal();
+    const { createUser, profileUpdate, user } = useGlobal();
 
     // function for password toggle 
     const handleTogglePass = () => {
@@ -62,7 +62,7 @@ const Register = () => {
     }
 
     return (
-        <div>
+        <div className={user && 'pt-5'}>
             <form onSubmit={handleRegister} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
 
                 {/* heading */}

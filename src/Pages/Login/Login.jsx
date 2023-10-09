@@ -10,10 +10,9 @@ import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 /* eslint-disable react/no-unescaped-entities */
 const Login = () => {
     const [showPaas, setShowPaas] = useState(false);
-    const { loginUser, additionalLogin } = useGlobal();
+    const { loginUser, additionalLogin, user } = useGlobal();
     const navigate = useNavigate();
-    const location = useLocation()
-
+    const location = useLocation();
 
     const handleTogglePass = () => {
         setShowPaas(!showPaas)
@@ -55,7 +54,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className={user && 'pt-5'}>
             <form onSubmit={handleLogin} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
 
                 {/* heading */}
