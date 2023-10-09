@@ -11,7 +11,7 @@ const Menus = () => {
             .then(res => res.json())
             .then(data => setMenus(data))
     }, [])
-    console.log(menus)
+
     return (
         <div>
             <div className="w-[90%] mx-auto">

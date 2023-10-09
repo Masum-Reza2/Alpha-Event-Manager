@@ -4,11 +4,14 @@
 
 # Features
 
-- feature 1
-- second 2
-- third 3
-- third 4
-- third 5
+- There is a nice authentication system, User can create account in this website.
+- Without login user can look after the home page and beauty of the site.
+- To deep dive into the website user have to log in first, elese user will be redirected to the login page.
+- User can toggle between login and register page very easily.
+- While login and registration if user give invalid information then the system will catch him/her and give a sweet error.
+- There are some private routes that prevent unauthenticated users from loitering.
+- User can see the menu items of the and cooperate with it before booking.
+- After login, logout and if user got any error then he/she will be notified with react hot toast.
 
 <div align="center">
   <img height="60" src="https://edurev.gumlet.io/AllImages/original/ApplicationImages/CourseImages/944e5d47-8c55-4a89-91e5-22ab5f2798fc_CI.png">
