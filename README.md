@@ -30,7 +30,7 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer:A</b></summary>
+<details><summary><b>Answer:A: `{}`</b></summary>
 <p>
 
 #### Answer: ?
@@ -55,12 +55,12 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer : C: `"12"`</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>It will print string '12', because when we try to calculate number and string, it becaome concatenate.To get the correct result both datatype should be number.</i>
 
 </p>
 </details>
