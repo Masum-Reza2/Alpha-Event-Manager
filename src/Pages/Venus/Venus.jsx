@@ -1,12 +1,20 @@
+import { useEffect, useState } from 'react'
 import venuImg from '../../assets/images/venus/venus.jpg'
 import VenuCard from './VenuCard'
 import MessageUs from '../../Components/MessageUs/MessageUs'
 import Footer from '../../Components/Footer/Footer'
-import { useLoaderData } from 'react-router-dom'
+import useGlobal from '../../Hooks/useGlobal'
 
 const Venus = () => {
-    const venus = useLoaderData();
+    const [venus, setVenus] = useState([]);
 
+    const { user } = useGlobal();
+
+    useEffect(() => {
+        fetch('/venus.json')
+            .then(res => res.json())
+            .then(data => setVenus(data))
+    }, [user])
 
     return (
         <div>

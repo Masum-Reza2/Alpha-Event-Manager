@@ -1,11 +1,20 @@
+import { useEffect, useState } from 'react'
 import manuImg from '../../assets/images/menus/menus.jpg'
 import MenuCard from './MenuCard'
 import MessageUs from '../../Components/MessageUs/MessageUs'
 import Footer from '../../Components/Footer/Footer'
-import { useLoaderData } from 'react-router-dom'
+import useGlobal from '../../Hooks/useGlobal'
 
 const Menus = () => {
-    const menus = useLoaderData();
+    const [menus, setMenus] = useState([]);
+
+    const { user } = useGlobal();
+
+    useEffect(() => {
+        fetch('/menus.json')
+            .then(res => res.json())
+            .then(data => setMenus(data))
+    }, [user])
 
     return (
         <div>
