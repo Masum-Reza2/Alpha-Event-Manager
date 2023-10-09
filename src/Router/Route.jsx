@@ -27,8 +27,8 @@ const Route = createBrowserRouter([
                 element: <PrivateRoute><DetailsService /></PrivateRoute>
             },
             { path: '/ourTeam', loader: () => fetch('/ourTeam.json'), element: <PrivateRoute><OurTeam /></PrivateRoute> },
-            { path: '/menus', element: <PrivateRoute><Menus /></PrivateRoute> },
-            { path: '/venus', element: <PrivateRoute><Venus /></PrivateRoute> },
+            { path: '/menus', loader: () => fetch('/menus.json'), element: <PrivateRoute><Menus /></PrivateRoute> },
+            { path: '/venus', loader: () => fetch('/venus.json'), element: <PrivateRoute><Venus /></PrivateRoute> },
         ]
     }
 ])
