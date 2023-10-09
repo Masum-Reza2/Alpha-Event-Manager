@@ -30,7 +30,7 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer:A: `{}`</b></summary>
+<details><summary><b>Answer : A</b></summary>
 <p>
 
 #### Answer: ?
@@ -55,7 +55,7 @@ sum(1, "2");
 - C: `"12"`
 - D: `3`
 
-<details><summary><b>Answer : C: `"12"`</b></summary>
+<details><summary><b>Answer : C</b></summary>
 <p>
 
 #### Answer: ?
@@ -81,7 +81,7 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>Answer : A: `['🍕', '🍫', '🥑', '🍔']`</b></summary>
+<details><summary><b>Answer : A</b></summary>
 <p>
 
 #### Answer: ?
@@ -106,12 +106,12 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer : B</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>Here sayHi function takes a parameter(name), and this parameter is used inside the function. When the function was called, the argument never passed, that's why in the place of argument it print undefined, because it never get any value in the require place.</i>
 
 </p>
 </details>
@@ -134,7 +134,7 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer : C</b></summary>
 <p>
 
 #### Answer: ?
