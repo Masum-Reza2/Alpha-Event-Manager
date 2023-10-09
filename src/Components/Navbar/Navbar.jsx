@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom"
 import defaultProfile from '../../assets/images/defaultProfile.jpg'
 import logo from '../../assets/favicon.avif'
 import useGlobal from "../../Hooks/useGlobal"
-import toast, { Toaster } from "react-hot-toast"
+import toast from "react-hot-toast"
 
 const Navbar = () => {
     const { user, signOutUser } = useGlobal();
@@ -30,7 +30,6 @@ const Navbar = () => {
     </>
     return (
         <div>
-            {/* <Toaster /> */}
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">

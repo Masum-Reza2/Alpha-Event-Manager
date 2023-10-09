@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 import useGlobal from "../../Hooks/useGlobal";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -63,7 +63,6 @@ const Register = () => {
 
     return (
         <div>
-            {/* <Toaster /> */}
             <form onSubmit={handleRegister} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
 
                 {/* heading */}
