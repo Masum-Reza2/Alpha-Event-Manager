@@ -1,6 +1,6 @@
 # Website name : Alpha event manager
 
-# Site live at : www.google.com
+# Site live at : https://alpha-event-manager.web.app/
 
 # Features
 
