@@ -30,12 +30,12 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details><summary><b>Answer</b></summary>
+<details><summary><b>Answer:A</b></summary>
 <p>
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>It will console an empty object {}. At fisrt line variable declered but value not assigned, in 2nd line the value assigned, we know that varibles declered with let can be reassigned.</i>
 
 </p>
 </details>
