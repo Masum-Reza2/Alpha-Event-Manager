@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const VenuCard = ({ venu }) => {
     const { img, title, desc } = venu;
     return (
-        <div className='h-full w-full border cursor-pointer pb-3 rounded-lg transition-all duration-500 hover:bg-blue-100 lg:hover:scale-125'>
+        <div className='h-full w-full border cursor-pointer pb-3 rounded-lg transition-all duration-500 hover:bg-blue-100 lg:hover:scale-110'>
             <div>
                 <img className='md:h-[50vh] w-full rounded-lg' src={img} alt="" />
             </div>
