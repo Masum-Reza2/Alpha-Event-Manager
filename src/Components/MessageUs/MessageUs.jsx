@@ -1,4 +1,5 @@
 import useGlobal from "../../Hooks/useGlobal"
+import defaultProfile from '../../assets/images/defaultProfile.jpg'
 
 const MessageUs = () => {
     const { user } = useGlobal();
@@ -18,7 +19,7 @@ const MessageUs = () => {
                         </h5>
                         <img
                             alt={`image of ${user?.displayName}`}
-                            src={user?.photoURL}
+                            src={user?.photoURL || defaultProfile}
                             className="relative inline-block h-[74px] w-[74px] rounded-full border-2 border-white object-cover object-center"
                         />
                     </div>
