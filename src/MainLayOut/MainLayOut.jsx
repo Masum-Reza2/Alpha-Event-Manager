@@ -14,19 +14,21 @@ const MainLayOut = () => {
 
 
     return (
-        <div className="mx-auto scroll-smooth">
+        <>
             <Toaster />
-            <Navbar />
-            {
-                navigation.state === 'loading' ?
-                    <Spinner />
-                    :
-                    <div className="min-h-[70vh] py-2">
-                        <Outlet />
-                    </div>
-            }
+            <div className="mx-auto scroll-smooth">
+                <Navbar />
+                {
+                    navigation.state === 'loading' ?
+                        <Spinner />
+                        :
+                        <div className="min-h-[70vh] py-2">
+                            <Outlet />
+                        </div>
+                }
 
-        </div>
+            </div>
+        </>
     )
 }
 

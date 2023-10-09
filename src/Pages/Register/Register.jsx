@@ -63,7 +63,7 @@ const Register = () => {
 
     return (
         <div>
-            <Toaster />
+            {/* <Toaster /> */}
             <form onSubmit={handleRegister} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
 
                 {/* heading */}
@@ -117,9 +117,9 @@ const Register = () => {
                     {/* password */}
                     <div className="relative h-11 w-full min-w-[200px]">
                         {
-                            showPaas ? <AiFillEyeInvisible onClick={handleTogglePass} className="absolute right-2 text-xl top-3 " />
+                            showPaas ? <AiFillEyeInvisible onClick={handleTogglePass} className="absolute right-2 text-xl top-3 cursor-pointer " />
                                 :
-                                <AiFillEye onClick={handleTogglePass} className="absolute right-2 text-xl top-3 " />
+                                <AiFillEye onClick={handleTogglePass} className="absolute right-2 text-xl top-3 cursor-pointer " />
                         }
                         <input
                             required

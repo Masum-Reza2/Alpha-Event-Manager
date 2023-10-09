@@ -56,7 +56,7 @@ const Login = () => {
 
     return (
         <div>
-            <Toaster />
+            {/* <Toaster /> */}
             <form onSubmit={handleLogin} className="relative flex w-[90vw] md:w-[60vw] lg:w-[40vw] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md mx-auto py-5">
 
                 {/* heading */}
